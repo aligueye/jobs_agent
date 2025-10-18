@@ -1,0 +1,7 @@
+queries:
+  - what: "software engineer"
+    where: "New York, NY"
+  - what: "backend engineer fintech"
+    where: "Remote"
+results_per_page: 50
+pages: 2
