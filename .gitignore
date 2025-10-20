@@ -1,7 +1,10 @@
 .env
 
 chroma/
+fetch_cache/
 
 *.sqlite3
 __pycache__/
 venv/
+
+.vscode/

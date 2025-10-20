@@ -1,6 +1,6 @@
 import csv, json, os, yaml
 from pathlib import Path
-from fetchers.adzuna import fetch_adzuna, normalize
+from src.fetchers.adzuna import fetch_adzuna, normalize
 
 ROOT = Path(__file__).resolve().parents[1]
 cfg = yaml.safe_load(open(ROOT / "configs/sources.yaml"))
@@ -31,7 +31,7 @@ def main():
         "created",
         "salary_min",
         "salary_max",
-        "url",
+        "redirect_url",
         "description",
     ]
     with open(out_csv, "w", newline="", encoding="utf-8") as f:

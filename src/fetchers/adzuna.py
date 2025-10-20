@@ -65,7 +65,7 @@ def normalize(ad):
         "company": (ad.get("company") or {}).get("display_name", ""),
         "location": ", ".join(area) if isinstance(area, list) else str(area),
         "created": ad.get("created", ""),
-        "url": ad.get("redirect_url", ""),
+        "redirect_url": ad.get("redirect_url", ""),
         "salary_min": ad.get("salary_min"),
         "description": (ad.get("description") or "").replace("\n", " ").strip(),
     }
