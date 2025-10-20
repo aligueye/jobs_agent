@@ -1,7 +1,12 @@
 queries:
-  - what: "software engineer"
+  - what_or: ["fintech", "payments", "C++", "Python", "React", "Backend", "Fullstack"]   # must appear (anywhere)
+    what_exclude: ["staff", "principal", "manager", "director"] # exclude senior mgmt
     where: "New York, NY"
-  - what: "backend engineer fintech"
-    where: "Remote"
-results_per_page: 50
-pages: 2
+    distance: 50 # km radius
+    
+global_params:
+  results_per_page: 50
+  pages: 2
+  max_days_old: 5
+  # sort_by: "date"  # options: date, relevance
+  salary_min: 100000
