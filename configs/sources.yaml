@@ -1,12 +1,22 @@
 queries:
-  - what_or: ["fintech", "payments", "C++", "Python", "React", "Backend", "Fullstack"]   # must appear (anywhere)
-    what_exclude: ["staff", "principal", "manager", "director"] # exclude senior mgmt
-    where: "New York, NY"
-    distance: 50 # km radius
-    
+  # Adzuna query example
+  # - source: adzuna
+  #   what_or: ["fintech", "payments", "C++", "Python", "React", "Backend", "Fullstack"]
+  #   what_exclude: ["staff", "principal", "manager", "director"]
+  #   where: "New York, NY"
+  #   distance: 50  # km radius
+
+  # JobSpy query example (scrapes LinkedIn, Indeed, Glassdoor, ZipRecruiter)
+  - source: jobspy
+    search_term: "software engineer"
+    location: "New York, NY"
+    distance: 50
+    site_name: ["indeed", "linkedin"]  # options: indeed, linkedin, glassdoor, zip_recruiter
+
 global_params:
-  results_per_page: 50
-  pages: 2
-  max_days_old: 5
-  # sort_by: "date"  # options: date, relevance
+  results_per_page: 50  # used by adzuna
+  results_wanted: 50    # used by jobspy
+  pages: 2              # adzuna pagination
+  max_days_old: 5       # adzuna
+  hours_old: 120        # jobspy (5 days * 24 hours)
   salary_min: 100000

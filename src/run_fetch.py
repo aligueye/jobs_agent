@@ -1,6 +1,8 @@
-import csv, json, os, yaml
+import csv, json, yaml
 from pathlib import Path
-from src.fetchers.adzuna import fetch_adzuna, normalize
+
+from src.fetchers.adzuna import fetch_adzuna, normalize as normalize_adzuna
+from src.fetchers.jobspy import fetch_jobspy, normalize as normalize_jobspy
 
 ROOT = Path(__file__).resolve().parents[1]
 cfg = yaml.safe_load(open(ROOT / "configs/sources.yaml"))
@@ -12,17 +14,30 @@ def main():
     out_jsonl.parent.mkdir(parents=True, exist_ok=True)
 
     all_jobs = []
+    global_params = cfg.get("global_params", {})
+
     for q in cfg["queries"]:
-        ads = fetch_adzuna(query=q, global_params=cfg.get("global_params", {}))
-        all_jobs.extend(ads)
+        source = q.get("source", "adzuna")
+
+        if source == "adzuna":
+            jobs = fetch_adzuna(query=q, global_params=global_params)
+            normalized = [normalize_adzuna(j) for j in jobs]
+        elif source == "jobspy":
+            jobs = fetch_jobspy(query=q, global_params=global_params)
+            normalized = [normalize_jobspy(j) for j in jobs]
+        else:
+            print(f"Unknown source: {source}, skipping")
+            continue
+
+        all_jobs.extend([(j, n) for j, n in zip(jobs, normalized)])
 
     # write raw
     with open(out_jsonl, "w", encoding="utf-8") as f:
-        for ad in all_jobs:
-            f.write(json.dumps(ad, ensure_ascii=False) + "\n")
+        for raw, _ in all_jobs:
+            f.write(json.dumps(raw, ensure_ascii=False, default=str) + "\n")
 
-    # normalize + CSV
-    rows = [normalize(a) for a in all_jobs]
+    # normalized CSV
+    rows = [n for _, n in all_jobs]
     cols = [
         "src_id",
         "title",

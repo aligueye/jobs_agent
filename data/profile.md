@@ -1,44 +1,95 @@
-## Alioune Gueye — Software Engineer / Fintech & Systems Developer
+# Ali Gueye — Software Engineer
 
-### Summary
-Results-driven software engineer with 3+ years of experience building reliable backend systems, data pipelines, and full-stack products in fast-moving environments. Skilled in Python, C++, TypeScript, and React, with a deep interest in financial-systems engineering and AI-powered automation. Known for delivering clean refactors, strong observability, and measurable reliability gains.
+**Location:** Jersey City, NJ 07310
+**Email:** gueyea1@tcnj.edu
+**GitHub:** github.com/aligueye
+**LinkedIn:** linkedin.com/in/ali-gueye
 
-### Technical Strengths
-- **Languages:** Python · C++ · JavaScript/TypeScript · PHP · Bash · PowerShell  
-- **Frameworks:** React · Redux · Node.js · Flask · SQLAlchemy · GraphQL · Django  
-- **Databases:** MySQL · SQLite · Redis  
-- **DevOps / Tools:** Docker · AWS · Azure · CI/CD · Git · GMock · Selenium  
+---
 
-### Professional Highlights
-**Meta — Software Engineer (2024 – 2025)**  
-- Built a payment-state visualization and alerting tool, improving incident detection and reducing SEVs by 22%.  
-- Led refactor of C++ pub/sub notification system, simplifying architecture and improving reliability.  
-- Backfilled ~950 million records and established new SQL truth tables fixing critical transaction bugs.  
-- Optimized transaction-ordering logic to reduce rollback rates by 24%.  
+## Skills
 
-**KittyHawk Digital — Software Engineer (2021 – 2024)**  
-- Automated content migration of 5 000+ records with zero errors.  
-- Built and maintained React CMS integrations and media conversion API (FFmpeg + Azure Containers).  
-- Enhanced Redux frontend for rewards program app with data caching and advanced filtering.  
+**Languages:** Python, JavaScript, TypeScript, C++, PHP, Bash, Go
+**Frameworks:** React, Redux, Node.js, Flask, SQLAlchemy, GraphQL, Django, LangChain
+**Databases:** MySQL, PostgreSQL, SQLite, Redis
+**Tools:** Git, Mercurial, Azure, AWS, GMock, Selenium, Docker, CI/CD
 
-**Cognizant — Junior Azure Consultant (2020 – 2021)**  
-- Authored automated API tests in PowerShell and UI tests in C#/Selenium, raising coverage to 36%.  
-- Delivered PowerApps project-management solution integrated with SharePoint to boost team productivity.  
+---
 
-**TCNJ — Research Assistant (2020 – 2021)**  
-- Implemented confidence-based stopping method in NLP ML pipeline to optimize annotation effort.  
+## Experience
 
-### Education
-**B.S. Business Administration, The College of New Jersey (2021)**  
-EOF Scholarship Recipient · Relevant Coursework: Data Structures & Algorithms, Machine Learning, OOP  
+### Software Engineer — KittyHawk Digital (Jan 2026 – Present)
+*Westwood, NJ*
+- Developed containerized local Docker environment and documentation, accelerating backend onboarding
+- Diagnosed and resolved brittle tests and environment misconfigurations, improving stability across CI/CD pipelines
+- Led API migration from legacy Django 1.x to modern versions, mapping deprecated endpoints and ensuring compatibility
 
-### Career Focus
-Interested in fintech, payments infrastructure, and AI automation tools that bridge backend systems with intelligent workflows. Excels in environments where reliability engineering meets product impact.
+### Software Engineer — Meta (April 2024 – April 2025)
+*New York, NY*
+- Built a full-stack (React & C++ API) payment state-transition visualization and alerting system, improving observability and reducing SEVs by 22%
+- Designed and implemented refactor of pub/sub notification system in C++ that propagates status through payment engine, prioritizing simplicity and reliability
+- Backfilled 950 million records and validated new SQL table as source of truth for transaction status, fixing 7 critical bugs across double write and backfill logic
+- Enhanced transaction integrity in C++ by sorting execution order to prioritize payment methods over stored credit, reducing need to rollback transactions by 24%
 
-### Projects
-- **Round-Up Saver (Ruby on Rails)** – Fintech micro-app automating round-ups and deposits using background jobs.  
-- **SF Food Facilities API (FastAPI)** – Async API serving city dataset via aiosqlite, Dockerized for deployment.  
-- **LiquidityManager (Solidity)** – Uniswap-V2-style CP-AMM contract + unit tests on Sepolia.  
-- **Greenboard Crawler (Python)** – Recursive async site archiver with offline navigation and link rewriting.  
-- **Rigged Wheel Spinner (React/Electron)** – Multi-window desktop app with admin view and custom roulette logic.  
-- **Job-Apply Bot (Playwright)** – Automates submissions on Greenhouse/Lever; includes rate limiting and resume injection.
+### Founder & Full-Stack Engineer — IndexMyPage (March 2024 – Present)
+- Owned and shipped a full-stack SaaS using React, Flask, SQLAlchemy, PostgreSQL, Redis, and the Google Indexing API to accelerate content indexing, with Stripe-based subscription billing
+- Implemented secure session-based authentication with hashed credentials, cookie-backed sessions, and request-scoped user context
+- Added structured logging, request IDs, and observability to debug auth, payments, and indexing flows
+- Designed REST APIs, rate-limit-aware request handling, and CI/CD via GitHub Actions with deployment to Azure
+
+### Software Engineer — KittyHawk Digital (Nov 2021 – April 2024)
+*Westwood, NJ*
+- Automated content migration of 5000+ records between CMS platforms using JavaScript with 0% error
+- Developed and maintained CMS integration of a React application, enhancing user experience and site reliability
+- Built and documented a Python media conversion API using FFmpeg, Docker, and Azure
+- Redesigned rewards program app's activities page with React & Redux; integrated data caching and advanced filtering
+
+### Junior Azure Consultant — Cognizant (June 2020 – Feb 2021)
+*Washington, DC*
+- Wrote automated API tests using PowerShell as part of a CI/CD pipeline, accelerating deployment process
+- Developed automated UI tests using C# and Selenium for .NET application, increasing test coverage to 36%
+- Built production project management app using PowerApps, integrating SharePoint, boosting team productivity
+
+---
+
+## Education
+
+**B.S. in Business Administration** — The College of New Jersey (May 2021)
+Recipient of the Educational Opportunity Fund (EOF) Scholarship
+Relevant Coursework: Data Structures and Algorithms, Software Engineering, Machine Learning, OOP
+
+---
+
+## Job Preferences
+
+**Target Roles:**
+- Software Engineer (Backend, Full-Stack, or Platform)
+- Fintech / Payments Engineer
+- Infrastructure / Systems Engineer
+
+**Seniority Level:** Mid-level to Senior (3-5 years experience)
+
+**Location Preferences:**
+- New York City metro area (NYC, Jersey City, Hoboken)
+- Remote or Hybrid preferred
+- Open to fully onsite for the right opportunity
+
+**Salary Expectations:** $150,000 - $220,000 base
+
+**Industries of Interest:**
+- Fintech, Payments, Banking
+- AI/ML tooling and infrastructure
+- Developer tools and platforms
+- High-growth startups or established tech companies
+
+**What I'm Looking For:**
+- Ownership over meaningful systems
+- Strong engineering culture with code review and testing
+- Opportunity to work on backend systems, APIs, or infrastructure
+- Teams that value reliability and observability
+
+**What I Want to Avoid:**
+- Staff/Principal/Director level roles (too senior)
+- Pure management positions
+- Legacy maintenance-only roles with no greenfield work
+- Companies requiring security clearance
